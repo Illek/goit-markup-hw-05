@@ -659,18 +659,20 @@ img {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 0 0 0 38px;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 
-input:focus-visible,
-textarea:focus-visible {
-  outline: none;
-}
-
-.modal-input-wrap:focus-within,
+.modal-input:focus-within,
 .modal-textarea:focus-within {
   fill: #4d5ae5;
   border-radius: 4px;
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
+}
+
+.modal-label-wrap {
+  margin-bottom: 8px;
 }
 
 .modal-input-wrap {
@@ -695,6 +697,7 @@ textarea:focus-visible {
   resize: none;
   padding: 8px 0 0 16px;
   margin-top: 4px;
+  outline: transparent;
 }
 
 .modal-textarea::placeholder,
